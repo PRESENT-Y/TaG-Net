@@ -1,0 +1,28 @@
+import os 
+import numpy as np
+import sys
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+import GraphConstruction.utils_vis as vutils
+import GraphConstruction.utils_base as butils
+
+if __name__ == '__main__':
+   
+    data_path = './SampleData'
+    patients = sorted(os.listdir(data_path))
+    patients = ['003']
+    for patient in patients:
+
+        # graph_path = os.path.join(data_path,patient,'CenterlineGraph')
+        # point_cloud_path = os.path.join(data_path,patient,'labeled_cl.txt')
+
+        # graph_path = os.path.join(data_path,patient,'CenterlineGraph_new')
+        # point_cloud_path = os.path.join(data_path,patient,'labeled_cl_new.txt')
+
+        graph_path = os.path.join(data_path,patient,'CenterlineGraph_removal')
+        point_cloud_path = os.path.join(data_path,patient,'labeled_cl_removal.txt')
+
+        data = np.loadtxt(point_cloud_path).astype(np.float32)
+        edge_list = butils.load_pairs(graph_path)
+
+        # visualize labeled centerline graph
+        vutils.vis_multi_graph(data, edge_list)

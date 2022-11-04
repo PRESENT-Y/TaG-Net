@@ -1,0 +1,7 @@
+*.nii.gz
+build
+_pointnet2.so
+*.pyc
+__pycache__
+*.cpython-37.pyc
+*.pth

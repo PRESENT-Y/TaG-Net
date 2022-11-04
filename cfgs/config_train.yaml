@@ -1,0 +1,30 @@
+common:
+    workers: 0
+    num_points: 4096
+    num_classes: 18
+    batch_size: 1
+
+    base_lr: 0.001
+    lr_clip: 0.00001
+    lr_decay: 0.5
+    decay_step: 21
+    epochs: 20000 
+
+    weight_decay: 0
+    bn_momentum: 0.9
+    bnm_clip: 0.01
+    bn_decay: 0.5
+
+    evaluate: 1           
+    val_freq_epoch: 0.7   
+    print_freq_iter: 5  
+
+    input_channels: 0     # feature channels except (x, y, z) # radiiu & hu
+
+    relation_prior: 1
+
+
+    checkpoint: ''
+    save_path: ./TaG-Net-Test/models/ # checkpoint
+    data_root: ./TaG-Net-Test/ # dataset & train/val//test.txt
+    graph_dir: ./TaG-Net-Test/
