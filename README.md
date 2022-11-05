@@ -46,18 +46,21 @@ Segmentation models can be downloaded at [Google Drive](https://drive.google.com
 git clone https://github.com/PRESENT-Y/TaG-Net.git 
 cd TaG-Net
 ```
-
+#### Pytorch 0.4.1
+```bash
+conda create -n TaG-Net python=3.7
+conda activate TaG-Net
+conda install pytorch==0.4.1 torchvision cuda90 -c pytorch
+```
+#### Other Dependencies (e.g., dgl, networkx, mayavi and dijkstra3d)
+```bash
+pip install -r requirements.txt 
+```
 #### Build 
 ```bash
 mkdir build && cd build
 cmake .. && make  
 ```
-
-#### Other Dependencies (e.g., dgl, networkx, mayavi and dijkstra3d)
-```bash
-pip install -r requirements.txt 
-```
-
 ### Data Preparation
 
 #### Download
