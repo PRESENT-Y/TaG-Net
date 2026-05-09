@@ -32,8 +32,6 @@ We propose a novel framework for centerline-based vessel labeling. The framework
 
 Hu range is set as [0, 800] (Window width/level = 800/400).
 
-<!-- Segmentation models can be downloaded at [Google Drive](https://drive.google.com/drive/folders/1Q1GoRfvVZsSgxbia60jANJscOkKXetyx?usp=sharing) -->
-
 ### TaG-Net
 
 ![Teaser image](Figs/Fig-Network.png)
